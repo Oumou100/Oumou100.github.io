@@ -634,6 +634,11 @@ section {
 .portfolio-details {
   padding-top: 40px;
 }
+.video-resize {
+  width: 100%;        /* La vidéo prendra la largeur de son conteneur */
+  max-height: 560px;  /* Limiter la hauteur à 400px (ajuste la valeur selon tes besoins) */
+  object-fit: cover;  /* Conserve les proportions de la vidéo sans la déformer */
+}
 
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
