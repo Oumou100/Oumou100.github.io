@@ -219,6 +219,14 @@ video2.addEventListener("volumechange", function () {
     video2.muted = true; // Si le volume est modifié, on remet la vidéo en muet
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+      video.playbackRate = 2; // Change la vitesse (ex: 1.5x)
+    });
+  });
   </script>
 </body>
 </html>
