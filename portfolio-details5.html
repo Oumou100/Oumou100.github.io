@@ -129,18 +129,26 @@
             
             <h4 class="h2">Ajout et gestion des voitures</h4>
             <video controls muted oncontextmenu="return false;" disablePictureInPicture>
-              <source src="assets/img/portfolio/postCar.mp4" type="video/mp4">
+              <source src="assets/img/portfolio/sell_car_post.mp4" type="video/mp4">
             </video>
             <p>Un vendeur ajoute une nouvelle voiture à la plateforme en renseignant toutes les informations nécessaires. Il peut ensuite consulter ses voitures déjà postées, les modifier ou les supprimer, ainsi que filtrer les annonces selon plusieurs critères.</p>
             
             <h4 class="h2">Enchères et validation</h4>
-            <video controls muted oncontextmenu="return false;" disablePictureInPicture>
-              <source src="assets/img/portfolio/BidOnCar.mp4" type="video/mp4">
+            <video  id="myVideo"
+            controls
+            muted
+            oncontextmenu="return false;"
+            disablePictureInPicture>
+              <source src="assets/img/portfolio/sell_car_bid.mp4" type="video/mp4">
             </video>
             <p>Dans cette démonstration, un utilisateur nommé Dily s'inscrit sur la plateforme et place une enchère sur une voiture. Ensuite, le vendeur Oumou se connecte, consulte les offres reçues et accepte l'une d'elles.</p>
             <h4 class="h2">Partie Admin</h4>
-            <video controls muted oncontextmenu="return false;" disablePictureInPicture>
-                <source src="assets/img/portfolio/admin.mp4" type="video/mp4">
+            <video id="myVideo2"
+            controls
+            muted
+            oncontextmenu="return false;"
+            disablePictureInPicture>
+                <source src="assets/img/portfolio/sell_car-admin.mp4" type="video/mp4">
             </video>
             <p>Dans cette vidéo, un administrateur unique se connecte à la plateforme et accède à l’interface d’administration. Il peut :</p>
             <ul>
@@ -186,5 +194,31 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const video = document.getElementById("myVideo");
+
+    // Forcer la vidéo à rester en mode muet (muted) en permanence
+    video.muted = true;
+
+    // Surveiller l'état du volume et réinitialiser à muet si l'utilisateur tente de l'activer
+    video.addEventListener("volumechange", function () {
+      if (video.volume > 0) {
+        video.muted = true; // Si le volume est modifié, on remet la vidéo en muet
+      }
+    });
+
+    const video2 = document.getElementById("myVideo2");
+
+// Forcer la vidéo à rester en mode muet (muted) en permanence
+video2.muted = true;
+
+// Surveiller l'état du volume et réinitialiser à muet si l'utilisateur tente de l'activer
+video2.addEventListener("volumechange", function () {
+  if (video2.volume > 0) {
+    video2.muted = true; // Si le volume est modifié, on remet la vidéo en muet
+  }
+});
+  </script>
 </body>
 </html>
