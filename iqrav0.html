@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation - Plateforme d'apprentissage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #2c5282;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .status-banner {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .status-icon {
+            width: 24px;
+            height: 24px;
+            background: #92400e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .tech-stack {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 5px 10px;
+            margin: 3px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .description {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-banner">
+            <div class="status-icon">!</div>
+            <span>NB: Projet en cours de développement - Version de démonstration</span>
+        </div>
+        <h1>Démonstration de la Plateforme d'Apprentissage en Ligne</h1>
+        <div class="video-container">
+            <video controls>
+                <source src="/assets/img/portfolio/iqra.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <div class="description">
+            <h2>À propos de la plateforme</h2>
+            <p>Notre plateforme d'apprentissage en ligne offre une expérience éducative interactive et personnalisée.</p>
+            <p>Découvrez comment nos outils facilitent l'apprentissage à distance.</p>
+            <div class="tech-stack">
+                <h3>Technologies utilisées</h3>
+                <span>Laravel/Mysql</span>
+                <span>NextJs</span>
+                <span>Tailwind CSS</span>
+                <span>Versionning(Git/Github)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation - Smart AI Travel Planner</title>
+    <style>
+         .status-banner {
+            background: #e0f2fe;
+            color: #075985;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .status-icon {
+            width: 24px;
+            height: 24px;
+            background: #075985;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #1a365d;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .features {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .feature-card h3 {
+            color: #2b6cb0;
+        }
+        .tech-badges {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .visit-link {
+            display: inline-flex;
+            align-items: center;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-left: 12px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+        }
+
+        .visit-link:hover {
+            background: #1a365d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+        }
+
+        .development-phase {
+            margin-top: 30px;
+            padding: 15px;
+            background: #f0fdf4;
+            border-radius: 8px;
+            color: #166534;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-banner">
+            <div class="status-icon">!</div>
+            <span>NB: Projet en cours - Accès anticipé</span>
+        </div>
+        <div class="title-container">
+            <h1>Comment Fonctionne Smart AI Travel Planner</h1>
+            <a href="https://smart-ai-trip-planner-six.vercel.app" class="visit-link" target="_blank">
+                Visiter le site
+            </a>
+        </div>        <div class="video-container">
+            <video controls>
+                <source src="/assets/img/portfolio/smart-ia.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <div class="tech-badges">
+            <h3>Stack Technique</h3>
+            <span class="tech-badge">React JS</span>
+            <span class="tech-badge">Shadcn/ui</span>
+            <span class="tech-badge">Google Places API</span>
+            <span class="tech-badge">Gemini AI</span>
+            <span class="tech-badge">Firebase</span>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Connexion Google</h3>
+                <p>Connectez-vous avec votre compte Google pour sauvegarder vos itinéraires</p>
+            </div>
+            <div class="feature-card">
+                <h3>Planification IA</h3>
+                <p>Notre IA Gemini crée des itinéraires personnalisés selon vos préférences</p>
+            </div>
+            <div class="feature-card">
+                <h3>Google Places</h3>
+                <p>Intégration avec Google Places pour des informations précises et à jour</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
