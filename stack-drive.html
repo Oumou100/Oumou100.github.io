@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackDrive - Gestionnaire de Documents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --background: #ffffff;
+            --background-alt: #f9fafb;
+            --border: #e5e7eb;
+            --accent: #4f46e5;
+            --accent-light: #818cf8;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+            background: var(--background-alt);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-light);
+        }
+
+        .live-link {
+            display: inline-flex;
+            align-items: center;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .live-link:hover {
+            opacity: 0.9;
+        }
+
+        .status-banner {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border: 1px solid #fee2e2;
+        }
+
+        .video-section {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: var(--text);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .feature-card h3 {
+            color: var(--text);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background: var(--background-alt);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .implementation-note {
+            background: var(--background-alt);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .implementation-note h4 {
+            margin: 0 0 1rem 0;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .implementation-note ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .implementation-note li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+
+        .choice-reason {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .header {
+                padding: 2rem 1rem;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>StackDrive</h1>
+            <p>Une plateforme moderne de gestion de documents avec intelligence artificielle</p>
+            <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Version Démo - Projet de Test Technique
+            </div>
+            <a href="https://stack-drive-iota.vercel.app/" class="live-link" target="_blank">
+                Visiter le site en ligne
+            </a>
+        </div>
+
+        <div class="status-banner">
+            <strong>Note:</strong> Certaines fonctionnalités sont en cours de développement, notamment l'upload de fichiers dans les organisations.
+        </div>
+
+        <div class="video-section">
+            <h2 class="section-title">Vidéo 1: Présentation et Connexion</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="/assets/img/portfolio/connexionStackDrive.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2 class="section-title">Vidéo 2: Gestion des Organisations</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="/assets/img/portfolio/orgg.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+            <div class="implementation-note">
+                <h4>Fonctionnalités d'organisation</h4>
+                <ul>
+                    <li>Création d'organisations avec gestion des rôles (admin, membres)</li>
+                    <li>Système d'invitation par email</li>
+                    <li>Upload de fichiers dans les organisations (en cours de développement)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2 class="section-title">Vidéo 3: Fonctionnalités Principales</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="/assets/img/portfolio/reste.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+            <div class="implementation-note">
+                <h4>Détail des Fonctionnalités</h4>
+                <ul>
+                    <li>
+                        <strong>Gestion des Fichiers Personnels</strong>
+                        <div class="choice-reason">
+                            - Upload de fichiers PDF dans l'espace personnel<br>
+                            - Organisation des fichiers avec système de dossiers<br>
+                            - Déplacement de fichiers vers la corbeille
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Fonctionnalités de Favoris</strong>
+                        <div class="choice-reason">
+                            - Ajout de documents aux favoris pour un accès rapide<br>
+                            - Gestion de la liste des favoris
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Analyse de Documents</strong>
+                        <div class="choice-reason">
+                            - Analyse automatique des fichiers PDF uploadés<br>
+                            - Extraction et visualisation du contenu<br>
+                            - Interface dédiée pour la lecture des documents
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Historique des Actions</strong>
+                        <div class="choice-reason">
+                            - Suivi des actions effectuées sur les fichiers<br>
+                            - Historique des uploads et modifications<br>
+                            - Traçabilité des opérations
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2 class="section-title">Stack Technique</h2>
+            <div class="tech-badges">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Convex</span>
+                <span class="tech-badge">Clerk</span>
+                <span class="tech-badge">Tailwind CSS</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Shadcn/ui</span>
+                <span class="tech-badge">LangChain / Gemini</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Authentification Sécurisée</h3>
+                <p>Connexion via Clerk avec gestion des sessions et des autorisations utilisateurs</p>
+            </div>
+            <div class="feature-card">
+                <h3>Gestion des Fichiers</h3>
+                <p>Upload, organisation et gestion de vos fichiers PDF avec stockage cloud via Convex</p>
+            </div>
+            <div class="feature-card">
+                <h3>Analyse IA</h3>
+                <p>Analyse de documents PDF et génération de résumés avec l'intelligence artificielle</p>
+            </div>
+            <div class="feature-card">
+                <h3>Interface Moderne</h3>
+                <p>UI réactive et intuitive avec Tailwind CSS et Shadcn/ui</p>
+            </div>
+        </div>
+
+        <div class="implementation-note">
+            <h4>Choix Techniques et Justifications</h4>
+            <ul>
+                <li>
+                    <strong>Clerk au lieu de NextAuth.js</strong>
+                    <div class="choice-reason">
+                        Clerk offre une solution d'authentification plus complète avec une meilleure gestion des organisations et des rôles. 
+                        Son intégration avec Next.js est plus fluide et son interface de gestion des utilisateurs est plus intuitive.
+                    </div>
+                </li>
+                <li>
+                    <strong>Convex au lieu de PostgreSQL</strong>
+                    <div class="choice-reason">
+                        Convex fournit une solution de base de données serverless avec une synchronisation en temps réel intégrée. 
+                        Cela simplifie grandement le développement des fonctionnalités de collaboration et de notifications en temps réel.
+                    </div>
+                </li>
+                <li>
+                    <strong>Fonctionnalités d'organisation supplémentaires</strong>
+                    <div class="choice-reason">
+                        L'ajout de la gestion des organisations permet une meilleure collaboration entre les utilisateurs et 
+                        une meilleure organisation des fichiers, répondant aux besoins réels des utilisateurs en entreprise.
+                    </div>
+                </li>
+                <li>
+                    <strong>Shadcn/ui pour l'interface</strong>
+                    <div class="choice-reason">
+                        Shadcn/ui offre des composants de haute qualité, personnalisables et accessibles, 
+                        permettant de créer une interface utilisateur professionnelle rapidement tout en maintenant une excellente expérience utilisateur.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
