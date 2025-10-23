@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Gestionnaire de Finances Personnelles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #f0fdf4, #ffffff);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .status-banner {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .status-icon {
+            width: 24px;
+            height: 24px;
+            background: #92400e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        h1 {
+            color: #1a365d;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .features {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card h3 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .tech-badges {
+            margin: 40px 0;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .tech-badges h3 {
+            color: #1a365d;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .tech-badge {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 10px 20px;
+            margin: 8px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .architecture {
+            margin-top: 50px;
+            padding: 30px;
+            background: #f0f9ff;
+            border-radius: 15px;
+            border-left: 5px solid #3b82f6;
+        }
+        .architecture h3 {
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .architecture ul {
+            text-align: left;
+            color: #1e40af;
+            line-height: 1.8;
+        }
+        .stats-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: #fef3c7;
+            border-radius: 15px;
+            border-left: 5px solid #f59e0b;
+        }
+        .stats-section h3 {
+            color: #92400e;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #f59e0b;
+        }
+        .stat-label {
+            color: #92400e;
+            font-size: 0.9em;
+        }
+        .demo-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: #e0f2fe;
+            border-radius: 15px;
+            border-left: 5px solid #0369a1;
+        }
+        .demo-section h3 {
+            color: #075985;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        .demo-section p {
+            color: #075985;
+            line-height: 1.6;
+        }
+        .icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .visit-link {
+            display: inline-flex;
+            align-items: center;
+            background: #059669;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            margin: 20px 0;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+        }
+        .visit-link:hover {
+            background: #047857;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(5, 150, 105, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-banner">
+            <div class="status-icon">!</div>
+            <span><strong>NB: Projet en cours de développement - Version de démonstration</strong></span>
+        </div>
+        
+        <h1>🏦 FinTrack - Gestionnaire de Finances Personnelles</h1>
+        <p class="subtitle">Application de gestion financière moderne et sécurisée</p>
+        
+        <div class="video-container">
+            <video controls>
+                <source src="/assets/img/portfolio/fintrack-demo.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+
+        <div class="demo-section">
+            <h3>📱 À propos de l'application</h3>
+            <p>Notre application de gestion financière offre une expérience complète pour suivre vos revenus, dépenses et transactions en temps réel.</p>
+            <p>Découvrez comment nos outils facilitent la gestion de vos finances personnelles avec une interface intuitive et sécurisée.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">🔐</div>
+                <h3>Authentification sécurisée</h3>
+                <p>Authentification robuste avec Clerk pour la sécurité des données financières.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💰</div>
+                <h3>Gestion des transactions</h3>
+                <p>Suivi de vos revenus et dépenses avec catégorisation et historique.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <h3>Interface multilingue</h3>
+                <p>Support en Français, Anglais et Bambara pour une expérience localisée.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔄</div>
+                <h3>Synchronisation temps réel</h3>
+                <p>Synchronisation entre mobile et backend pour un accès partout.</p>
+            </div>
+        </div>
+
+        <div class="tech-badges">
+            <h3>🛠️ Technologies utilisées</h3>
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">Expo Router</span>
+            <span class="tech-badge">Expo 54</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">Express.js</span>
+            <span class="tech-badge">PostgreSQL (Neon)</span>
+            <span class="tech-badge">Clerk</span>
+            <span class="tech-badge">Upstash Redis</span>
+            <span class="tech-badge">ngrok</span>
+            <span class="tech-badge">Git/GitHub</span>
+        </div>
+
+        <div class="demo-section">
+            <h3>📱 Démonstration</h3>
+            <p>Application de gestion financière moderne avec authentification sécurisée et synchronisation temps réel.</p>
+        </div>
+
+        <p style="margin-top: 40px; color: #6b7280; font-style: italic;">
+            *Démonstration d'une application de gestion financière moderne avec authentification sécurisée et synchronisation temps réel.*
+        </p>
+    </div>
+</body>
+</html>

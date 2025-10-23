@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Application Mobile de Santé</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .status-banner {
+            background: #e0f2fe;
+            color: #075985;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .status-icon {
+            width: 24px;
+            height: 24px;
+            background: #075985;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        h1 {
+            color: #1a365d;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .features {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card h3 {
+            color: #2b6cb0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .tech-badges {
+            margin: 40px 0;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .tech-badges h3 {
+            color: #1a365d;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .tech-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 10px 20px;
+            margin: 8px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .architecture {
+            margin-top: 50px;
+            padding: 30px;
+            background: #f0fdf4;
+            border-radius: 15px;
+            border-left: 5px solid #22c55e;
+        }
+        .architecture h3 {
+            color: #166534;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .architecture ul {
+            text-align: left;
+            color: #166534;
+            line-height: 1.8;
+        }
+        .demo-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: #fef3c7;
+            border-radius: 15px;
+            border-left: 5px solid #f59e0b;
+        }
+        .demo-section h3 {
+            color: #92400e;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        .demo-section p {
+            color: #92400e;
+            line-height: 1.6;
+        }
+        .icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .visit-link {
+            display: inline-flex;
+            align-items: center;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            margin: 20px 0;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+        }
+        .visit-link:hover {
+            background: #1a365d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="status-banner">
+            <div class="status-icon">!</div>
+            <span><strong>NB: Projet en cours de développement - Version de démonstration</strong></span>
+        </div>
+        
+        <h1>📱 MediCare - Interface Utilisateur Mobile</h1>
+        <p class="subtitle">Démonstration de l'Interface Utilisateur de Santé</p>
+        
+        <div class="video-container">
+            <video controls>
+                <source src="/assets/img/portfolio/medicare-demo.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+
+        <div class="demo-section">
+            <h3>🎯 À propos de l'interface</h3>
+            <p>Interface utilisateur moderne pour une application mobile de santé avec design intuitif et expérience utilisateur optimisée.</p>
+            <p>Découvrez les écrans et la navigation de cette interface dédiée aux soins médicaux.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">🏠</div>
+                <h3>Écran d'accueil</h3>
+                <p>Interface d'accueil avec services médicaux, sélection de symptômes et liste des médecins.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💬</div>
+                <h3>Interface de messagerie</h3>
+                <p>Écrans de conversation avec les médecins et historique des échanges.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">👨‍⚕️</div>
+                <h3>Profils médecins</h3>
+                <p>Pages de présentation des médecins avec leurs informations et spécialités.</p>
+            </div>
+        </div>
+
+        <div class="tech-badges">
+            <h3>🛠️ Technologies utilisées</h3>
+            <span class="tech-badge">React Native 0.74.3</span>
+            <span class="tech-badge">React Navigation 6</span>
+            <span class="tech-badge">React Native Paper</span>
+            <span class="tech-badge">React Native Vector Icons</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">Git/GitHub</span>
+        </div>
+
+        <div class="demo-section">
+            <h3>📱 Démonstration de l'interface</h3>
+            <p>Interface utilisateur mobile de santé avec design moderne et navigation intuitive pour les soins médicaux.</p>
+        </div>
+
+        <p style="margin-top: 40px; color: #6b7280; font-style: italic;">
+            *Interface développée avec ❤️ en React Native - Démonstration UI pour portfolio*
+        </p>
+    </div>
+</body>
+</html>
