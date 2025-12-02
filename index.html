@@ -5,9 +5,24 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portofolio Oumou Koné</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Oumou Koné - Développeuse Full-Stack | Portfolio</title>
+  <meta name="description" content="Portfolio de Oumou Koné, développeuse Full-Stack passionnée de Tech & IA. Spécialisée en React, Next.js, Spring Boot, Laravel. Découvrez mes projets web et mobiles.">
+  <meta name="keywords" content="développeuse full-stack, React, Next.js, Spring Boot, Laravel, portfolio, développeur web, développeur mobile, Oumou Koné">
+  <meta name="author" content="Oumou Koné">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oumou100.github.io/">
+  <meta property="og:title" content="Oumou Koné - Développeuse Full-Stack | Portfolio">
+  <meta property="og:description" content="Portfolio de Oumou Koné, développeuse Full-Stack passionnée de Tech & IA. Spécialisée en React, Next.js, Spring Boot, Laravel.">
+  <meta property="og:image" content="https://oumou100.github.io/assets/img/it.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://oumou100.github.io/">
+  <meta property="twitter:title" content="Oumou Koné - Développeuse Full-Stack | Portfolio">
+  <meta property="twitter:description" content="Portfolio de Oumou Koné, développeuse Full-Stack passionnée de Tech & IA. Spécialisée en React, Next.js, Spring Boot, Laravel.">
+  <meta property="twitter:image" content="https://oumou100.github.io/assets/img/profi.jpg">
 
   <!-- Favicons -->
   <link href="assets/img/logo.ico" rel="icon">
@@ -28,6 +43,33 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Dark Mode Toggle -->
+  <style>
+    .dark-mode-toggle {
+      position: fixed;
+      bottom: 90px;
+      right: 15px;
+      z-index: 1000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #149ddd;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .dark-mode-toggle:hover {
+      background: #0d7fb8;
+      transform: scale(1.1);
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -48,7 +90,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profi.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/it.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Oumou Koné</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -74,10 +116,10 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Oumou Koné</h1>
-      <p>Je suis <span class="typed" data-typed-items="Developpeuse"></span></p>
+      <p>Je suis <span class="typed" data-typed-items="Développeuse"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -89,44 +131,52 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>À Propos, vous trouverez des informations essentielles me concernant. Explorez mes coordonnées pour rester
-            en contact et découvrir comment me joindre. Je suis disponible pour discuter de projets, répondre à vos
-            questions et explorer de nouvelles opportunités de collaboration</p>
+          <p>Découvrez mon parcours, mes compétences et ma passion pour le développement</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profi.jpg" class="img-fluid" alt="">
+            <img src="assets/img/it.jpg" class="img-fluid" alt="Oumou Koné">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Devoloppeuse</h3>
+            <h3>Développeuse Full-Stack | Passionnée de Tech & IA</h3>
             <p class="fst-italic">
-              <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. -->
+              Étudiante en génie informatique, je suis passionnée par la création d'applications web et mobiles et toujours en quête de nouvelles connaissances.
             </p>
-            <div class="row">
+            <p>
+              Grâce à mes projets, j'ai pu explorer plusieurs technologies aussi bien en <strong>Front-end</strong> (React, Next.js, React Native, Angular, Tailwind CSS) qu'en <strong>Back-end</strong> (Laravel, Spring Boot, PHP, Java, C# .NET).
+            </p>
+            <div class="motivation-section">
+              <h4>💡 Ce qui me motive ?</h4>
+              <ul class="motivation-list">
+                <li><i class="bi bi-check-circle-fill"></i> Apprendre et expérimenter de nouvelles technologies</li>
+                <li><i class="bi bi-check-circle-fill"></i> Optimiser et résoudre des challenges techniques</li>
+                <li><i class="bi bi-check-circle-fill"></i> Partager et échanger sur les bonnes pratiques et tendances tech</li>
+                <li><i class="bi bi-check-circle-fill"></i> Explorer le potentiel de l'IA et du Machine Learning dans le développement</li>
+              </ul>
+            </div>
+            <p>
+              En plus du développement, j'aime travailler sur des projets concrets, collaborer avec d'autres passionnés et approfondir mes compétences à travers des expériences variées.
+            </p>
+            <p class="contact-cta">
+              <strong>📩 Toujours ouverte aux échanges et aux opportunités !</strong>
+            </p>
+            <div class="row mt-4">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Telephone1:</strong> <span>+212 650770609</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Telephone2:</strong> <span>+223 82181124</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Adresse1:</strong> <span>Casablanca,Maroc</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Téléphone 1:</strong> <span>+212 650770609</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Téléphone 2:</strong> <span>+223 82181124</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Adresse 1:</strong> <span>Casablanca, Maroc</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Adresse2:</strong> <span>Bamako,Mali</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>5ème Année Génie
-                      Informatique</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email</strong> <span>oumou.kone.it@gmail.com</span>
-                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Adresse 2:</strong> <span>Bamako, Mali</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Niveau:</strong> <span>5ème Année Génie Informatique</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>oumou.kone.it@gmail.com</span></li>
                 </ul>
               </div>
             </div>
-            <!-- <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p> -->
           </div>
         </div>
 
@@ -368,135 +418,111 @@
               <p><em>Lycée Les Castors,Bamako</em></p>
               <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
             </div>
-            <h3 class="resume-title">Experiences professionnelles et professionnelles</h3>
-          </div>
-          <div class="resume-item">
-            <h4>Ecole la Colombe - Système de gestion scolaire</h4>
-            <h5>août 2025 - aujourd'hui</h5>
-            <p><em>Une plateforme complète permettant de gérer les élèves, les enseignants, les notes, les emplois du temps et la communication avec les parents. Elle inclut aussi la gestion financière et des rapports détaillés, le tout via une interface responsive et une API REST performante.</em></p>
-            <p><strong>Technologies :</strong> Laravel, API Rest, Next.js</p>
-            <p><strong>Lien :</strong> <a href="https://re7.ecolelacolombe.com/" target="_blank">https://re7.ecolelacolombe.com/</a></p>
-          </div>
-          <div class="resume-item">
-            <h4>Conception et développement de site vitrine avec back Office</h4>
-            <h5>juin 2025</h5>
+            <h3 class="resume-title">Expériences personnelles et professionnelles</h3>
+            <div class="resume-item">
+              <h4>Ecole la Colombe - Système de gestion scolaire</h4>
+              <p><em>Une plateforme complète permettant de gérer les élèves, les enseignants, les notes, les emplois du temps et la communication avec les parents. Elle inclut aussi la gestion financière et des rapports détaillés, le tout via une interface responsive et une API REST performante.</em></p>
+              <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Laravel | <i class="bi bi-code-slash"></i> API Rest | <i class="bi bi-code-slash"></i> Next.js</p>
+              <p><strong>Lien :</strong> <a href="https://re7.ecolelacolombe.com/" target="_blank">https://re7.ecolelacolombe.com/</a></p>
+            </div>
+            <div class="resume-item">
+              <h4>Conception et développement de site vitrine avec back Office</h4>
             <p><em>Développement complet de sites web en tant que prestataire : de la conception UI/UX (Figma) au développement (Next.js, Tailwind, Sanity) jusqu'au déploiement. Optimisation SEO, indexation Google, intégration Google Analytics et Search Console.</em></p>
-            <p><strong>Technologies :</strong> Next.js, Tailwind CSS, Figma, Sanity</p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Next.js | <i class="bi bi-code-slash"></i> Tailwind CSS | <i class="bi bi-code-slash"></i> Figma | <i class="bi bi-code-slash"></i> Sanity</p>
             <p><strong>Sites :</strong> <a href="https://www.universmedicalsante.com/fr" target="_blank">Univers Medical Santé</a> | <a href="https://www.polemedical.ma/fr" target="_blank">Pole Medical</a></p>
           </div>
           <div class="resume-item">
             <h4>Nokha Spice - Site e-commerce</h4>
-            <h5>mars 2025 - mai 2025</h5>
             <p><em>Développement d'une marketplace e-commerce multi-vendeurs avec gestion complète des produits, commandes et boutiques. Création d'un espace client sécurisé avec panier, authentification, gestion des commandes et assistance ChatBot. Conception d'une interface moderne et responsive, avec animations interactives et UX optimisée.</em></p>
-            <p><strong>Technologies :</strong> Spring Boot, React.js, Tailwind CSS</p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Spring Boot | <i class="bi bi-code-slash"></i> React.js | <i class="bi bi-code-slash"></i> Tailwind CSS</p>
+            <p><strong>Détails :</strong> <a href="portfolio-details-nokha.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
             <h4>FinTrack - Gestionnaire de Finances Personnelles</h4>
-            <h5>avr. 2025</h5>
             <p><em>Ajout et gestion de transactions : revenus et dépenses avec catégorisation simple. Fonctionnalités interactives : modifier ou supprimer les transactions, consultation de l'historique. Accessibilité et confort d'utilisation : interface responsive et support multilingue.</em></p>
-            <p><strong>Technologies :</strong> React Native, Expo, Clerk, Node.js</p>
-            <p><strong>Démo :</strong> <a href="https://oumou100.github.io/fin-track.html" target="_blank">https://oumou100.github.io/fin-track.html</a></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> React Native | <i class="bi bi-code-slash"></i> Expo | <i class="bi bi-code-slash"></i> Clerk | <i class="bi bi-code-slash"></i> Node.js</p>
+            <p><strong>Détails :</strong> <a href="fin-track.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
             <h4>Smart IA Travel Planner</h4>
-            <h5>mars 2025</h5>
             <p><em>Créer un planificateur de voyage intelligent qui simplifie l'organisation des voyages en combinant l'IA générative (Gemini AI) et les services Google (Places, Maps). Fonctionnalités clés : génération d'itinéraires personnalisés en français, suggestions d'hébergements adaptés au budget, photos réelles des lieux via Google Places API, intégration avec Google Maps pour la navigation, installation possible en PWA pour un accès hors-ligne, authentification sécurisée avec Google, interface responsive et intuitive, partage des itinéraires via WhatsApp.</em></p>
-            <p><strong>Technologies :</strong> React.js, Tailwind CSS, Firebase, Google Gemini, PWA, Shadcn, Cloud Firestore</p>
-            <p><strong>Site :</strong> <a href="https://smart-ai-trip-planner-six.vercel.app/" target="_blank">https://smart-ai-trip-planner-six.vercel.app/</a> | <strong>Démo :</strong> <a href="https://oumou100.github.io/smart-ia.html" target="_blank">https://oumou100.github.io/smart-ia.html</a></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> React.js | <i class="bi bi-code-slash"></i> Tailwind CSS | <i class="bi bi-code-slash"></i> Firebase | <i class="bi bi-code-slash"></i> Google Gemini | <i class="bi bi-code-slash"></i> PWA | <i class="bi bi-code-slash"></i> Shadcn | <i class="bi bi-code-slash"></i> Cloud Firestore</p>
+            <p><strong>Site :</strong> <a href="https://smart-ai-trip-planner-six.vercel.app/" target="_blank">https://smart-ai-trip-planner-six.vercel.app/</a> | <strong>Détails :</strong> <a href="smart-ia.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
             <h4>StackDrive - Gestionnaire de Documents avec IA</h4>
-            <h5>fév. 2025</h5>
             <p><em>Une plateforme moderne de gestion de documents avec intelligence artificielle. Gestion des fichiers personnels et organisationnels, analyse automatique de documents PDF, système d'invitation par email, gestion des rôles (admin, membres), et synchronisation en temps réel.</em></p>
-            <p><strong>Technologies :</strong> Next.js, Convex, Clerk, Tailwind CSS, TypeScript, Shadcn/ui, LangChain, Gemini</p>
-            <p><strong>Site :</strong> <a href="https://stack-drive-iota.vercel.app/" target="_blank">https://stack-drive-iota.vercel.app/</a> | <strong>Démo :</strong> <a href="https://oumou100.github.io/stack-drive.html" target="_blank">https://oumou100.github.io/stack-drive.html</a></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Next.js | <i class="bi bi-code-slash"></i> Convex | <i class="bi bi-code-slash"></i> Clerk | <i class="bi bi-code-slash"></i> Tailwind CSS | <i class="bi bi-code-slash"></i> TypeScript | <i class="bi bi-code-slash"></i> Shadcn/ui | <i class="bi bi-code-slash"></i> LangChain | <i class="bi bi-code-slash"></i> Gemini</p>
+            <p><strong>Site :</strong> <a href="https://stack-drive-iota.vercel.app/" target="_blank">https://stack-drive-iota.vercel.app/</a> | <strong>Détails :</strong> <a href="stack-drive.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
             <h4>Réalisation d'une plateforme de vente et d'enchères de voitures</h4>
-            <h5>Technologies : Spring Boot, Angular, MySQL</h5>
             <p><em>Conception et développement d'une plateforme web permettant aux vendeurs de publier leurs véhicules
                 et aux acheteurs de faire des offres ou de participer à des enchères. Le système intègre un processus de
                 gestion des enchères en temps réel et un module d'administration permettant de superviser les
                 transactions et de garantir la sécurité des échanges.</em></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Spring Boot | <i class="bi bi-code-slash"></i> Angular | <i class="bi bi-code-slash"></i> MySQL</p>
+            <p><strong>Détails :</strong> <a href="portfolio-details5.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
-            <h4>Réalisation d’un système de gestion des pièces comptables</h4>
-            <h5>Technologies : HTML, TailwindCSS, Laravel, React JS, Node JS</h5>
+            <h4>Réalisation d'un système de gestion des pièces comptables</h4>
             <p><em>Création d'un système de gestion des pièces comptables avec intégration de chatbot (React comme
                 client et Node comme serveur).</em></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> HTML | <i class="bi bi-code-slash"></i> TailwindCSS | <i class="bi bi-code-slash"></i> Laravel | <i class="bi bi-code-slash"></i> React JS | <i class="bi bi-code-slash"></i> Node JS</p>
           </div>
           <div class="resume-item">
-            <h4>Développement d’un site vitrine e-learning interactif</h4>
-            <h5>Technologies : ReactJS, Tailwind CSS, Framer Motion</h5>
-            <p><strong>Site :</strong> <a href="https://oumoue-learning.vercel.app/" target="_blank">https://stack-drive-iota.vercel.app/</a> | <strong>Démo :</strong> <a href="https://oumou100.github.io/stack-drive.html" target="_blank">https://oumou100.github.io/stack-drive.html</a></p>
-
-            <p>
-              <em>Conception et développement d’une interface web moderne et responsive dédiée à l’apprentissage en
-                ligne. Ce projet a permis d’explorer l’animation d’interfaces avec Framer Motion, l’optimisation de
-                l’UI/UX avec Tailwind CSS et la structuration d’une application React pour une navigation fluide et
-                interactive.</em>
-            </p>
+            <h4>Développement d'un site vitrine e-learning interactif</h4>
+            <p><em>Conception et développement d'une interface web moderne et responsive dédiée à l'apprentissage en
+                ligne. Ce projet a permis d'explorer l'animation d'interfaces avec Framer Motion, l'optimisation de
+                l'UI/UX avec Tailwind CSS et la structuration d'une application React pour une navigation fluide et
+                interactive.</em></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> ReactJS | <i class="bi bi-code-slash"></i> Tailwind CSS | <i class="bi bi-code-slash"></i> Framer Motion</p>
+            <p><strong>Site :</strong> <a href="https://oumoue-learning.vercel.app/" target="_blank">https://oumoue-learning.vercel.app/</a> | <strong>Détails :</strong> <a href="portfolio-details6.html" target="_blank">Voir les détails du projet</a></p>
           </div>
 
           <div class="resume-item">
-            <h4>Réalisation d’un site de vente de jeux vidéos </h4>
-            <h5>Technologies : HTML,CSS,Bootstrap,JS,Php</h5>
+            <h4>Réalisation d'un site de vente de jeux vidéos </h4>
             <p><em>Création d'un site de vente de jeux vidéo avec mailing incluant une interface d'administration pour
                 la gestion facile des produits et des commandes.</em></p>
-            <ul>
-              <!--<li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul> -->
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> HTML | <i class="bi bi-code-slash"></i> CSS | <i class="bi bi-code-slash"></i> Bootstrap | <i class="bi bi-code-slash"></i> JavaScript | <i class="bi bi-code-slash"></i> PHP</p>
+            <p><strong>Détails :</strong> <a href="portfolio-details1.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
             <h4>Développement en cours d'une plateforme web pour une agence immobilière</h4>
-            <h5>Technologies : HTML,Bootstrap,Laravel</h5>
             <p><em>Développement en cours d'une plateforme web sous Laravel pour une agence immobilière, incluant un
                 système d'authentification sécurisé et une interface d'administration efficace et optimale.</em></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> HTML | <i class="bi bi-code-slash"></i> Bootstrap | <i class="bi bi-code-slash"></i> Laravel</p>
           </div>
 
           <div class="resume-item">
-            <h4>Réalisation d’un jeu de tir (Shooter) en mode
+            <h4>Réalisation d'un jeu de tir (Shooter) en mode
               graphique avec le langage python.
             </h4>
-            <!-- <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul> -->
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Python</p>
+            <p><strong>Détails :</strong> <a href="portfolio-details4.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
-            <h4>Réalisation d’un site de réservation de vols en ligne</h4>
-            <h5>Technologies : HTML, CSS, Bootstrap, JS, PHP</h5>
+            <h4>Réalisation d'un site de réservation de vols en ligne</h4>
             <p><em>Conception d'un site web permettant la réservation de vols en ligne, avec une fonctionnalité
                 d'impression de tickets personnalisés pour les passagers, facilitant ainsi la gestion des réservations
                 et des voyages. Le système inclut également une fonctionnalité de mailing pour une communication
                 efficace avec les passagers.</em></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> HTML | <i class="bi bi-code-slash"></i> CSS | <i class="bi bi-code-slash"></i> Bootstrap | <i class="bi bi-code-slash"></i> JavaScript | <i class="bi bi-code-slash"></i> PHP</p>
+            <p><strong>Détails :</strong> <a href="portfolio-details2.html" target="_blank">Voir les détails du projet</a></p>
           </div>
           <div class="resume-item">
             <h4>Gestion parking en mode console avec le langage Python. </h4>
-            <!-- <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul> -->
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> Python</p>
           </div>
 
 
           <div class="resume-item">
-            <h4>Réalisation d’une application de gestion
+            <h4>Réalisation d'une application de gestion
               hospital avec C# VB.Net
             </h4>
-            <h5>Technologies : C# .Net</h5>
             <p><em>Développé en VB.Net avec Windows Forms et SQL Server, ce système permet aux médecins de gérer les dossiers des patients, saisir des ordonnances et consulter les informations médicales. Les patients peuvent enregistrer leurs informations et obtenir des prescriptions de leur médecin. L'application est facilement installable via un fichier exécutable généré avec InnoSetup.</em></p>
+            <p><strong>Technologies :</strong> <i class="bi bi-code-slash"></i> C# .NET | <i class="bi bi-code-slash"></i> VB.Net | <i class="bi bi-code-slash"></i> SQL Server</p>
+            <p><strong>Détails :</strong> <a href="portfolio-details3.html" target="_blank">Voir les détails du projet</a></p>
             <!-- <h5>2017 - 2018</h5>
               <p><em>Stepping Stone Advertising, New York, NY</em></p>
               <ul>
@@ -558,21 +584,32 @@
         </div>
 
         <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
+          <div class="col-lg-12 d-flex justify-content-center flex-wrap">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-web">Web</li>
               <li data-filter=".filter-mobile">Mobile</li>
               <li data-filter=".filter-app">Logiciel</li>
+              <li data-filter=".filter-react">React</li>
+              <li data-filter=".filter-spring">Spring Boot</li>
+              <li data-filter=".filter-nextjs">Next.js</li>
+              <li data-filter=".filter-phplaravel">PHP/Laravel</li>
+              <li data-filter=".filter-angular">Angular</li>
+              <li data-filter=".filter-react-native">React Native</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-nextjs filter-phplaravel">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/ecole_la_colombe.png" class="img-fluid" alt="Ecole la Colombe">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">API Rest</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/ecole_la_colombe.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Ecole la Colombe"><i class="bx bx-plus"></i></a>
@@ -580,27 +617,42 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-nextjs">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/ums.png" class="img-fluid" alt="Univers Medical Santé">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Sanity</span>
+              </div>
               <div class="portfolio-links">
                 <a href="https://www.universmedicalsante.com/fr" target="_blank" title="Visiter le site"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-nextjs">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/pole_medical.png" class="img-fluid" alt="Pole Medical">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Sanity</span>
+              </div>
               <div class="portfolio-links">
                 <a href="https://www.polemedical.ma/fr" target="_blank" title="Visiter le site"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-react filter-spring">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/nokha_homepage.jpg" class="img-fluid" alt="Nokha Spice">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Tailwind CSS</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/nokha_homepage.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Nokha Spice"><i class="bx bx-plus"></i></a>
@@ -615,9 +667,15 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-react">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/smart_ia_hp.png" class="img-fluid" alt="Smart IA Travel Planner">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Gemini AI</span>
+                <span class="tech-tag">PWA</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/smart_ia_hp.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Smart IA Travel Planner"><i class="bx bx-plus"></i></a>
@@ -626,18 +684,29 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-nextjs">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/stack-drive.png" class="img-fluid" alt="StackDrive">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Convex</span>
+                <span class="tech-tag">LangChain</span>
+              </div>
               <div class="portfolio-links">
                 <a href="stack-drive.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mobile filter-react-native">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/home1_fintrack.jpg" class="img-fluid" alt="FinTrack">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/home1_fintrack.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="FinTrack"><i class="bx bx-plus"></i></a>
@@ -652,9 +721,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-phplaravel">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/acad.png" class="img-fluid" alt="">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/admin1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Web 3"><i class="bx bx-plus"></i></a>
@@ -666,6 +740,11 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/sgh.png" class="img-fluid" alt="">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">C# .NET</span>
+                <span class="tech-tag">VB.Net</span>
+                <span class="tech-tag">SQL Server</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/sgh2.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="App 1"><i class="bx bx-plus"></i></a>
@@ -696,9 +775,14 @@
             </div>
           </div>-->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-phplaravel">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/acce.png" class="img-fluid" alt="">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/pay.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Web 2"><i class="bx bx-plus"></i></a>
@@ -710,6 +794,10 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/shooter1.png" class="img-fluid" alt="">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pygame</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/shooter2.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="App 2"><i class="bx bx-plus"></i></a>
@@ -717,9 +805,14 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-spring filter-angular">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/sell_car_hp.png" class="img-fluid" alt="">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/sell_car_annonces.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Web 3"><i class="bx bx-plus"></i></a>
@@ -727,9 +820,14 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-react">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/e-learning.png" class="img-fluid" alt="">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Framer Motion</span>
+              </div>
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/e-learning2.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
                   title="Web 4"><i class="bx bx-plus"></i></a>
@@ -740,9 +838,13 @@
 
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mobile filter-react-native">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/medicare-ui.jpg" class="img-fluid" alt="MediCare UI">
+              <div class="portfolio-tech-tags">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Mobile UI</span>
+              </div>
               <div class="portfolio-links">
                 <a href="medicare-ui.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
@@ -965,7 +1067,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form id="contact-form" action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Votre Nom</label>
@@ -982,12 +1084,12 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" id="message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Votre message a été envoyé. Merci !</div>
               </div>
               <div class="text-center"><button type="submit">Envoyer Message</button></div>
             </form>
@@ -1016,6 +1118,10 @@
     </div>
   </footer><!-- End  Footer -->
 
+  <button class="dark-mode-toggle" id="darkModeToggle" title="Basculer le mode sombre/clair">
+    <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+  </button>
+  
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -1032,6 +1138,67 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Dark Mode Script -->
+  <script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const body = document.body;
+    
+    // Vérifier le mode sauvegardé
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+      darkModeIcon.classList.remove('bi-moon-fill');
+      darkModeIcon.classList.add('bi-sun-fill');
+    }
+    
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        darkModeIcon.classList.remove('bi-moon-fill');
+        darkModeIcon.classList.add('bi-sun-fill');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+        darkModeIcon.classList.remove('bi-sun-fill');
+        darkModeIcon.classList.add('bi-moon-fill');
+      }
+    });
+
+    // Contact form handler with mailto
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Create mailto link
+        const mailtoLink = `mailto:oumou.kone.it@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Nom: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+        
+        // Hide error message
+        const errorMessage = contactForm.querySelector('.error-message');
+        const sentMessage = contactForm.querySelector('.sent-message');
+        errorMessage.style.display = 'none';
+        sentMessage.style.display = 'none';
+        
+        // Open mailto link
+        window.location.href = mailtoLink;
+        
+        // Show success message after a short delay
+        setTimeout(() => {
+          sentMessage.style.display = 'block';
+          contactForm.reset();
+        }, 500);
+      });
+    }
+  </script>
 
 </body>
 
