@@ -511,6 +511,19 @@ section {
   padding-bottom: 10px;
 }
 
+.resume .resume-item a {
+  color: #149ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.resume .resume-item a:hover {
+  color: #0d7fb8;
+  border-bottom-color: #149ddd;
+}
+
 .resume .resume-item:last-child {
   padding-bottom: 0;
 }
@@ -571,6 +584,22 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+.portfolio .portfolio-item.filter-mobile .portfolio-wrap {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.portfolio .portfolio-item.filter-mobile .portfolio-wrap img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .portfolio .portfolio-wrap::before {
