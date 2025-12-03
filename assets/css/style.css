@@ -1396,6 +1396,85 @@ body.dark-mode .about .col-lg-4 img:hover {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
+/* Portfolio Details Dark Mode */
+body.dark-mode .portfolio-details {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .portfolio-details .portfolio-info {
+  background: #2a2a2a;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .portfolio-details .portfolio-info h3 {
+  color: #ffffff;
+  border-bottom-color: #444;
+}
+
+body.dark-mode .portfolio-details .portfolio-info ul li {
+  color: #e0e0e0;
+}
+
+body.dark-mode .portfolio-details .portfolio-info ul li strong {
+  color: #ffffff;
+}
+
+body.dark-mode .portfolio-details .portfolio-description h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .portfolio-details .portfolio-description p {
+  color: #d0d0d0;
+}
+
+body.dark-mode .portfolio-details .portfolio-description .important,
+body.dark-mode .portfolio-details .portfolio-description .highlight {
+  color: #7dd3fc;
+}
+
+body.dark-mode .portfolio-details .portfolio-description .role {
+  color: #5db8e8;
+}
+
+body.dark-mode .portfolio-video h1,
+body.dark-mode .portfolio-video h2,
+body.dark-mode .portfolio-video h4 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .portfolio-video p {
+  color: #d0d0d0;
+}
+
+body.dark-mode .portfolio-video ul li {
+  color: #d0d0d0;
+}
+
+/* Breadcrumbs Dark Mode */
+body.dark-mode .breadcrumbs {
+  background: #252525;
+}
+
+body.dark-mode .breadcrumbs h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .breadcrumbs ol li {
+  color: #e0e0e0;
+}
+
+body.dark-mode .breadcrumbs ol li a {
+  color: #7dd3fc;
+}
+
+body.dark-mode .breadcrumbs ol li a:hover {
+  color: #a5e0ff;
+}
+
+body.dark-mode .breadcrumbs ol li+li::before {
+  color: #888;
+}
+
 body.dark-mode .skills .progress .skill {
   color: #e0e0e0 !important;
 }
