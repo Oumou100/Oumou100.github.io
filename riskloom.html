@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiskLoom.AI - Prédiction de Risque de Crédit</title>
+    <style>
+        .status-banner {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .status-icon {
+            width: 24px;
+            height: 24px;
+            background: #92400e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #fef7ed, #ffffff);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #78350f;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #92400e;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        @media (min-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .image-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.02);
+        }
+        .image-caption {
+            background: #78350f;
+            color: white;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+        .features {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #d97706;
+        }
+        .feature-card h3 {
+            color: #92400e;
+        }
+        .feature-card p {
+            color: #78350f;
+            line-height: 1.6;
+        }
+        .tech-badges {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fffbeb;
+            border-radius: 8px;
+        }
+        .tech-badges h3 {
+            color: #78350f;
+            margin-bottom: 15px;
+        }
+        .tech-badge {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .devops-badge {
+            display: inline-block;
+            background: #fed7aa;
+            color: #9a3412;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .visit-link {
+            display: inline-flex;
+            align-items: center;
+            background: #d97706;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            margin: 20px 0;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(217, 119, 6, 0.3);
+        }
+        .visit-link:hover {
+            background: #b45309;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #92400e;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .back-link:hover {
+            color: #78350f;
+        }
+        .back-link svg {
+            margin-right: 8px;
+        }
+        .description-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin: 30px 0;
+            text-align: left;
+        }
+        .description-box h2 {
+            color: #78350f;
+            margin-bottom: 15px;
+        }
+        .description-box p {
+            color: #57534e;
+            line-height: 1.8;
+        }
+        .ml-highlight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .ml-highlight h3 {
+            color: #78350f;
+            margin-bottom: 10px;
+        }
+        .ml-highlight ul {
+            text-align: left;
+            color: #92400e;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#portfolio" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Retour au Portfolio
+        </a>
+        
+        <h1>RiskLoom.AI</h1>
+        <p class="subtitle">Modélisation Intelligente du Risque de Crédit</p>
+        
+        <div class="status-banner">
+            <span class="status-icon">✓</span>
+            Application déployée et fonctionnelle
+        </div>
+        
+        <a href="https://risk-loom-ai-oumou100.streamlit.app/" class="visit-link" target="_blank">
+            Visiter l'Application
+        </a>
+
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="assets/img/portfolio/riskloom-1.png" alt="RiskLoom.AI - Interface principale">
+                <div class="image-caption">Interface principale avec formulaire de saisie</div>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/portfolio/riskloom-2.png" alt="RiskLoom.AI - Résultat de prédiction">
+                <div class="image-caption">Résultat de prédiction avec animation</div>
+            </div>
+            <div class="image-container">
+                <img src="assets/img/portfolio/riskloom-3.png" alt="RiskLoom.AI - Analyse des risques">
+                <div class="image-caption">Analyse détaillée des facteurs de risque</div>
+            </div>
+        </div>
+
+        <div class="description-box">
+            <h2>Description du Projet</h2>
+            <p>
+                <strong>RiskLoom.AI</strong> est une application web intelligente d'évaluation du risque de crédit 
+                utilisant le Machine Learning. Le système analyse le profil financier des demandeurs 
+                (âge, emploi, comptes bancaires, montant demandé) et prédit la probabilité d'approbation 
+                grâce à un modèle <strong>XGBoost</strong> entraîné sur des données bancaires.
+            </p>
+            <p>
+                L'application offre une interface intuitive avec des visualisations interactives 
+                (jauge de probabilité, graphiques de risque) et permet la génération de rapports CSV téléchargeables. 
+                Elle supporte également plusieurs devises (EUR, MAD, CFA) pour s'adapter aux différents marchés.
+            </p>
+        </div>
+
+        <div class="ml-highlight">
+            <h3>Machine Learning Pipeline</h3>
+            <ul>
+                <li><strong>Modèle :</strong> XGBoost Classifier optimisé pour la classification binaire</li>
+                <li><strong>Features :</strong> Âge, situation d'emploi, état des comptes, montant et durée du crédit</li>
+                <li><strong>Preprocessing :</strong> Encodage des variables catégorielles avec Scikit-learn</li>
+                <li><strong>Évaluation :</strong> Probabilité d'approbation en pourcentage avec analyse des facteurs</li>
+            </ul>
+        </div>
+
+        <div class="tech-badges">
+            <h3>Stack Technique</h3>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Streamlit</span>
+            <span class="tech-badge">XGBoost</span>
+            <span class="tech-badge">Scikit-learn</span>
+            <span class="tech-badge">Pandas</span>
+            <span class="tech-badge">Plotly</span>
+            <br><br>
+            <h4 style="color: #9a3412; margin-bottom: 10px;">DevOps & Déploiement</h4>
+            <span class="devops-badge">Docker</span>
+            <span class="devops-badge">GitHub</span>
+            <span class="devops-badge">Streamlit Cloud</span>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Prédiction ML</h3>
+                <p>Modèle XGBoost entraîné sur des données bancaires pour évaluer le risque de crédit.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Visualisations</h3>
+                <p>Jauge de probabilité et graphiques d'analyse des facteurs de risque.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Multi-Devises</h3>
+                <p>Support EUR, MAD et CFA avec conversion automatique.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: #f5f5f4; border-radius: 10px;">
+            <p style="color: #78716c;">
+                Développé par <strong style="color: #78350f;">Koné Oumou</strong> | 
+                    <a href="https://github.com/Oumou100" target="_blank" style="color: #d97706;">GitHub</a>
+
+                <a href="https://www.linkedin.com/in/kon%C3%A9-oumou-98bb6229a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_verification_details%3BBvDWz7TBRNOQfAbJe62C4A%3D%3D" style="color: #d97706;">LinkeDin</a>
+
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
