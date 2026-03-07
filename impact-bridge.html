@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ImpactBridge - Démo du projet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/assets/img/portfolio/impact_bridge.ico" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #f7f7f5;
+            --surface: #ffffff;
+            --surface-soft: #f1f1ec;
+            --text: #1c1c18;
+            --muted: #66665e;
+            --line: #deded6;
+            --primary: #1f4f8f;
+            --primary-dark: #173b6b;
+            --accent: #b68a3d;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            --radius: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Manrope", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .hero {
+            padding: 48px 0 24px;
+        }
+
+        .hero-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: 36px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--primary);
+        }
+
+        h1 {
+            margin: 12px 0 10px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.03rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 18px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .button-secondary {
+            background: var(--surface);
+            color: var(--text);
+            border-color: var(--line);
+        }
+
+        .button-secondary:hover {
+            background: var(--surface-soft);
+        }
+
+        .section {
+            padding: 18px 0 26px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            margin: 0 0 10px;
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+
+        .section-text,
+        .card p,
+        .card li {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .video-box {
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: #111;
+            margin-top: 18px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            min-height: 36px;
+            padding: 0 12px;
+            border-radius: 999px;
+            background: var(--surface-soft);
+            border: 1px solid var(--line);
+            color: var(--text);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .feature {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: var(--surface);
+            padding: 18px;
+        }
+
+        .feature h3 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+        }
+
+        .note {
+            margin-top: 18px;
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: #f4efe4;
+            border: 1px solid #e6dcc6;
+            color: #5f5338;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            padding: 16px 0 48px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .signature {
+            margin-top: 8px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .signature a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .signature a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 860px) {
+
+            .grid-2,
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-card">
+                    <span class="eyebrow">Démo projet • Test technique</span>
+                    <h1>ImpactBridge</h1>
+                    <p>
+                        Application web responsive pour une organisation solidaire, avec site
+                        public, API documentée et espace d’administration sécurisé. Le projet
+                        est déployé côté front-end et côté back-end, avec gestion des activités,
+                        formulaire de contact, envoi d’emails et tableau de bord d’administration.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="https://impact-bridge-oumoudev.vercel.app/"
+                            target="_blank" rel="noopener noreferrer">
+                            Voir le site en ligne
+                        </a>
+                        <a class="button button-secondary" href="https://impact-bridge-api.vercel.app/docs"
+                            target="_blank" rel="noopener noreferrer">
+                            Voir la documentation API
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container grid grid-2">
+                <article class="card">
+                    <h2 class="section-title">Vidéo 1 • Parcours public</h2>
+                    <p class="section-text">
+                        Présentation du site public : landing page, navigation responsive,
+                        listing des activités, détail d’activité, services et formulaire de
+                        contact connecté au backend.
+                    </p>
+
+                    <div class="video-box">
+                        <video controls preload="metadata">
+                            <source src="/assets/img/portfolio/pdemo_impact_bridge.mp4" type="video/mp4" />
+                            Votre navigateur ne supporte pas la lecture vidéo.
+                        </video>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h2 class="section-title">Vidéo 2 • Administration</h2>
+                    <p class="section-text">
+                        Démonstration du back-office : Swagger, tableau de bord, réception
+                        des messages de contact, changement de statut, création d’activité
+                        avec upload d’image, brouillon puis publication, et impact immédiat
+                        sur l’affichage côté public.
+                    </p>
+
+                    <div class="video-box">
+                        <video controls preload="metadata">
+                            <source src="/assets/img/portfolio/admindemo_impact_bridge.mp4" type="video/mp4" />
+                            Votre navigateur ne supporte pas la lecture vidéo.
+                        </video>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container card">
+                <h2 class="section-title">Stack technique</h2>
+                <p class="section-text">
+                    Le projet repose sur une séparation claire entre interface et API,
+                    avec une architecture monorepo, une base PostgreSQL, une authentification
+                    JWT, des validations strictes, une documentation Swagger et un système
+                    d’upload d’images. Le formulaire de contact est relié à un vrai service
+                    d’envoi d’emails.
+                </p>
+
+                <div class="stack">
+                    <span class="badge">Next.js</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">Express.js</span>
+                    <span class="badge">Prisma</span>
+                    <span class="badge">PostgreSQL / Neon</span>
+                    <span class="badge">JWT</span>
+                    <span class="badge">React Query</span>
+                    <span class="badge">Zustand</span>
+                    <span class="badge">Swagger</span>
+                    <span class="badge">Cloudinary</span>
+                    <span class="badge">Zod</span>
+                    <span class="badge">Tailwind CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="feature-list">
+                    <article class="feature">
+                        <h3>Application responsive</h3>
+                        <p>
+                            L’interface a été pensée pour desktop et mobile, autant sur la
+                            partie publique que sur l’espace d’administration.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h3>Front-end et back-end déployés</h3>
+                        <p>
+                            Le site public et l’API sont accessibles en ligne, avec une vraie
+                            communication entre le front, la base de données et les services externes.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h3>Gestion de publication</h3>
+                        <p>
+                            Une activité créée en brouillon reste invisible sur le site public,
+                            puis apparaît dès qu’elle est publiée depuis l’admin.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h3>Messages exploitables</h3>
+                        <p>
+                            Les messages envoyés depuis le formulaire de contact sont stockés,
+                            consultables dans l’admin et peuvent être marqués comme lus ou archivés.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="note">
+                    <strong>Note de démonstration :</strong> la vidéo d’administration montre
+                    volontairement le cycle complet de gestion d’une activité, depuis sa
+                    création en brouillon jusqu’à sa publication et son affichage côté public.
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            L’équipe MKRT – Makaranta
+            <div class="signature">
+                Réalisé par <a href="https://oumou100.github.io/" target="_blank" rel="noopener noreferrer">OumouDev</a>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
