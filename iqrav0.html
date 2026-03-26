@@ -27,6 +27,7 @@
 
         h2 {
             color: #1e3a8a;
+            margin-bottom: 10px;
         }
 
         .video-container {
@@ -36,6 +37,21 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             overflow: hidden;
+        }
+
+        /* Mobile style (effet téléphone) */
+        .video-mobile {
+            max-width: 280px;
+            margin: 20px auto;
+            padding: 10px;
+            background: black;
+            border-radius: 25px;
+        }
+
+        .video-mobile video {
+            max-height: 520px;
+            border-radius: 15px;
+            object-fit: cover;
         }
 
         .status-banner {
@@ -72,9 +88,9 @@
         .tech-stack span {
             display: inline-block;
             background: #e2e8f0;
-            padding: 5px 10px;
-            margin: 3px;
-            border-radius: 15px;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 20px;
             font-size: 0.9em;
         }
 
@@ -85,7 +101,7 @@
 
         .description {
             margin-top: 30px;
-            padding: 20px;
+            padding: 25px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -93,8 +109,9 @@
 
         ul {
             text-align: left;
-            max-width: 600px;
-            margin: 10px auto;
+            max-width: 500px;
+            margin: 15px auto;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -109,7 +126,7 @@
 
         <h1>Démonstration de la Plateforme d'Apprentissage</h1>
 
-        <!-- 🎥 Vidéo plateforme web -->
+        <!-- Vidéo plateforme web -->
         <div class="video-container">
             <video controls>
                 <source src="/assets/img/portfolio/iqra.mp4" type="video/mp4">
@@ -117,22 +134,21 @@
             </video>
         </div>
 
-        <!-- 📝 Description principale -->
+        <!-- Description plateforme -->
         <div class="description">
-            <h2>À propos de la plateforme</h2>
+            <h2>Plateforme Web</h2>
             <p>
                 Cette plateforme d'apprentissage en ligne offre une expérience éducative interactive et personnalisée.
                 Elle permet aux utilisateurs d'accéder facilement à des contenus pédagogiques et de suivre leur
                 progression.
             </p>
-
         </div>
 
-        <!-- 📱 Version mobile -->
+        <!-- Version mobile -->
         <div class="description">
             <h2>Application Mobile : Coran & Outils Islamiques</h2>
 
-            <div class="video-container">
+            <div class="video-mobile">
                 <video controls>
                     <source src="/assets/img/portfolio/coran.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de vidéos.
@@ -141,19 +157,23 @@
 
             <p>
                 Une version mobile a également été développée pour accompagner les utilisateurs au quotidien avec des
-                fonctionnalités utiles et pratiques.
+                fonctionnalités essentielles.
             </p>
 
             <ul>
-                <li>🕌 Horaires de prières en temps réel</li>
-                <li>🔊 Adhan (appel à la prière)</li>
-                <li>🧭 Direction de la Qibla</li>
-                <li>📖 Lecture du Coran</li>
-                <li>📱 Interface optimisée pour mobile</li>
+                <li>Horaires de prières en temps réel</li>
+                <li>Adhan (appel à la prière)</li>
+                <li>Direction de la Qibla</li>
+                <li>Lecture du Coran</li>
+                <li>Interface optimisée pour mobile</li>
             </ul>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="description">
+            <h2>Technologies utilisées</h2>
 
             <div class="tech-stack">
-                <h3>Technologies utilisées</h3>
                 <span>Laravel / MySQL</span>
                 <span>React Native CLI</span>
                 <span>Next.js</span>
